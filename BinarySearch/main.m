@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SortedArray.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        SortedArray *testArray = [[SortedArray alloc] init];
+        testArray.target = 5;
+        testArray.sortedArray = @[@1, @2, @3, @5, @7, @9];
+        
+        int test = [testArray binarySearch];
+        NSLog(@"%d", test);
+    
     }
     return 0;
 }
